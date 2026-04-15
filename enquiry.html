@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry | Zok Internet Café</title>
+</head>
+<body>
+
+    <!-- Navigation bar with links to all six pages on the website -->
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About Us</a> |
+        <a href="services.html">Services</a> |
+        <a href="products.html">Products</a> |
+        <a href="enquiry.html">Enquiry</a> |
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- Page heading for the Enquiry page -->
+    <header>
+        <h1>Enquiry Form</h1>
+    </header>
+
+    <main>
+
+        <!-- Enquiry form allowing users to request information about services -->
+        <section>
+            <p>
+                Have a question or want to request a specific service? Complete the form below
+                and our team will get back to you as soon as possible.
+            </p>
+
+            <form action="#" method="post">
+
+                <!-- First Name and Last Name fields side by side -->
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                <br><br>
+
+                <!-- Email Address and Contact Number fields side by side -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                <label for="contact-number">Contact Number:</label>
+                <input type="tel" id="contact-number" name="contact-number" placeholder="e.g. 076 087 5444" required>
+                <br><br>
+
+                <!-- Dropdown selector for choosing the type of service needed -->
+                <label for="service-type">Service Type:</label>
+                <br>
+                <select id="service-type" name="service-type" required>
+                    <option value="" disabled selected>-- Select a Service --</option>
+                    <option value="printing">Printing</option>
+                    <option value="scanning">Scanning</option>
+                    <option value="sars">SARS e-Filing</option>
+                    <option value="sassa">SASSA Applications</option>
+                    <option value="psira">PSIRA Registration</option>
+                    <option value="cv-typing">CV Typing</option>
+                    <option value="internet">Internet Browsing</option>
+                    <option value="other">Other</option>
+                </select>
+                <br><br>
+
+                <!-- Text area for additional details or a custom message -->
+                <label for="message">Message / Additional Details:</label>
+                <br>
+                <textarea id="message" name="message" rows="6" cols="50" placeholder="Provide any additional details about your enquiry..."></textarea>
+                <br><br>
+
+                <!-- Submit button to send the enquiry form -->
+                <button type="submit">Submit Enquiry</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer with copyright and contact summary -->
+    <footer>
+        <hr>
+        <p>&copy; 2026 Zok Internet Café. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

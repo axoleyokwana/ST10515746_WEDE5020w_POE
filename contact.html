@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Zok Internet Café</title>
+</head>
+<body>
+
+    <!-- Navigation bar with links to all six pages on the website -->
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About Us</a> |
+        <a href="services.html">Services</a> |
+        <a href="products.html">Products</a> |
+        <a href="enquiry.html">Enquiry</a> |
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- Page heading for the Contact Us page -->
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <main>
+
+        <!-- Two-column layout: contact form on the left, map and details on the right -->
+        <table>
+            <tr>
+                <!-- Left column: contact form for sending a message -->
+                <td>
+                    <h2>Contact Us</h2>
+
+                    <form action="#" method="post">
+
+                        <!-- Name and Surname input field -->
+                        <label for="full-name">Name &amp; Surname:</label>
+                        <br>
+                        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                        <br><br>
+
+                        <!-- Email address input field -->
+                        <label for="email">Email:</label>
+                        <br>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        <br><br>
+
+                        <!-- Subject line input field -->
+                        <label for="subject">Subject:</label>
+                        <br>
+                        <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                        <br><br>
+
+                        <!-- Message text area for the body of the enquiry -->
+                        <label for="message">Message:</label>
+                        <br>
+                        <textarea id="message" name="message" rows="6" cols="40" placeholder="Write your message here..."></textarea>
+                        <br><br>
+
+                        <!-- Submit button to send the contact form -->
+                        <button type="submit">Contact Us</button>
+
+                    </form>
+                </td>
+
+                <!-- Right column: Google Maps embed and contact details -->
+                <td>
+
+                    <!-- Embedded Google Map showing the café location in Thokoza -->
+                    <h2>Our Location</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.2!2d28.23!3d-26.42!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDI1JzEyLjAiUyAyOMKwMTMnNDguMCJF!5e0!3m2!1sen!2sza!4v1"
+                        width="400"
+                        height="250"
+                        allowfullscreen=""
+                        loading="lazy"
+                        title="Google Map showing the location of Zok Internet Café in Thokoza">
+                    </iframe>
+                    <br>
+                    <p><strong>Location of Zok Internet Café, Thokoza</strong></p>
+
+                    <hr>
+
+                    <!-- Contact details: phone, WhatsApp, email, and operating hours -->
+                    <h3>Get In Touch</h3>
+                    <ul>
+                        <li><strong>Phone Number:</strong> 076 087 5444</li>
+                        <li><strong>WhatsApp:</strong> <a href="https://wa.me/27760875444">Chat on WhatsApp</a></li>
+                        <li><strong>Email Address:</strong> <a href="mailto:zokinternatecafe@gmail.com">zokinternatecafe@gmail.com</a></li>
+                        <li>
+                            <strong>Operating Hours:</strong>
+                            <br>
+                            Monday &ndash; Friday: 08:00 &ndash; 17:00
+                            <br>
+                            Saturday: 08:00 &ndash; 14:00
+                            <br>
+                            Sunday &amp; Public Holidays: Closed
+                        </li>
+                    </ul>
+
+                </td>
+            </tr>
+        </table>
+
+    </main>
+
+    <!-- Footer with copyright and contact summary -->
+    <footer>
+        <hr>
+        <p>&copy; 2026 Zok Internet Café. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
