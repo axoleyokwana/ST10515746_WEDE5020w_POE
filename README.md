@@ -1,9 +1,5 @@
 # Zok Internet Café Website
 
-**Module:** WEDE5020w  
-**Student:** Axole Yokwana  
-**Student Number:** ST10515746  
-
 ---
 
 ## Project Overview
@@ -16,12 +12,9 @@ The café currently has no online presence and relies entirely on physical marke
 
 ## Student Information
 
-| Field | Details |
-|---|---|
-| Full Name | Axole Yokwana |
-| Student Number | ST10515746 |
-| Module | WEDE5020w |
-| Institution | The Independent Institute of Education (IIE) |
+**Full Name:** Axole Yokwana  
+**Student Number:** ST10515746  
+**Module:** WEDE5020w
 
 ---
 
@@ -187,6 +180,7 @@ HOME
 | v0.2 | 15 Apr 2026 | Initial HTML code pushed to GitHub repository |
 | v0.3 | 18 Apr 2026 | Images added to project and linked to the HTML structure |
 | v0.4 | 18 Apr 2026 | README.md created and added to repository |
+| v0.5 | 18 Apr 2026 | Made changes to the README.md file |
 
 ---
 
