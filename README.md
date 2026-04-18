@@ -186,10 +186,16 @@ HOME
 
 ## References
 
-- ColorHunt, n.d. *Color Palettes for Designers and Artists*. [Online]. Available at: https://colorhunt.co. [Accessed 10 April 2026].
-- FreePik, n.d. *Images*. [Online]. Available at: https://www.freepik.com. [Accessed 10 April 2026].
-- GitHub, n.d. *GitHub Pages Documentation*. [Online]. Available at: https://docs.github.com/en/pages. [Accessed 10 April 2026].
-- Google Fonts, n.d. *Free Fonts Library*. [Online]. Available at: https://fonts.google.com. [Accessed 10 April 2026].
-- Host Africa, n.d. *Domain Registration in South Africa*. [Online]. Available at: https://hostafrica.co.za/domains/. [Accessed 10 April 2026].
-- PSIRA, n.d. *PSIRA Online Services*. [Online]. Available at: https://www.psira.co.za/. [Accessed 10 April 2026].
-- SARS, n.d. *SARS e-Filing Portal*. [Online]. Available at: https://www.sars.gov.za/. [Accessed 10 April 2026].
+ColorHunt, n.d. *Color Palettes for Designers and Artists*. [Online]. Available at: https://colorhunt.co. [Accessed 10 April 2026].
+
+FreePik, n.d. *Images*. [Online]. Available at: https://www.freepik.com. [Accessed 10 April 2026].
+
+GitHub, n.d. *GitHub Pages Documentation*. [Online]. Available at: https://docs.github.com/en/pages. [Accessed 10 April 2026].
+
+Google Fonts, n.d. *Free Fonts Library*. [Online]. Available at: https://fonts.google.com. [Accessed 10 April 2026].
+
+Host Africa, n.d. *Domain Registration in South Africa*. [Online]. Available at: https://hostafrica.co.za/domains/. [Accessed 10 April 2026].
+
+PSIRA, n.d. *PSIRA Online Services*. [Online]. Available at: https://www.psira.co.za/. [Accessed 10 April 2026].
+
+SARS, n.d. *SARS e-Filing Portal*. [Online]. Available at: https://www.sars.gov.za/. [Accessed 10 April 2026].
