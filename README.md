@@ -21,17 +21,17 @@ The café currently has no online presence and relies entirely on physical marke
 ## Website Goals and Objectives
 
 **Goals:**
-- Establish a professional online presence for Zok Internet Café
-- Centralise all service and pricing information in one place
-- Increase public awareness of government-related services offered, including SARS e-Filing, SASSA applications, and PSIRA registrations
-- Build trust with potential customers before they visit the café in person
+- Establish a professional online presence for Zok Internet Café.
+- Centralise all service and pricing information in one place.
+- Increase public awareness of government-related services offered, including SARS e-Filing, SASSA applications, and PSIRA registrations.
+- Build trust with potential customers before they visit the café in person.
 
 **Objectives:**
-- Reach 200 or more unique local visitors within the first two months of launch
-- Reduce in-store enquiries about pricing and availability by at least 30% within three months
-- Automate the enquiry process for specialised services via an online contact form
-- Ensure all key information is reachable within two clicks from the homepage
-- Grow the café's social media following by linking to Facebook and WhatsApp pages
+- Reach 200 or more unique local visitors within the first two months of launch.
+- Reduce in-store enquiries about pricing and availability by at least 30% within three months.
+- Automate the enquiry process for specialised services via an online contact form.
+- Ensure all key information is reachable within two clicks from the homepage.
+- Grow the café's social media following by linking to Facebook and WhatsApp pages.
 
 ---
 
@@ -39,19 +39,19 @@ The café currently has no online presence and relies entirely on physical marke
 
 The website will consist of six pages:
 
-- **index.html** - Homepage with a hero image, welcome message, call-to-action buttons, and operating hours
-- **about.html** - Business history, mission and vision statements, team overview, and community involvement
-- **services.html** - Full list of digital services with a pricing table, including printing, scanning, CV typing, and government service assistance
-- **products.html** - Stationery, tech accessories, airtime and data, refreshments, and SIM cards
-- **enquiry.html** - Contact form with a service type dropdown and confirmation message
-- **contact.html** - Physical address, embedded Google Map, phone number, WhatsApp link, and operating hours
+- **index.html** - Homepage with a hero image, welcome message, call-to-action buttons, and operating hours.
+- **about.html** - Business history, mission and vision statements, team overview, and community involvement.
+- **services.html** - Full list of digital services with a pricing table, including printing, scanning, CV typing, and government service assistance.
+- **products.html** - Stationery, tech accessories, airtime and data, refreshments, and SIM cards.
+- **enquiry.html** - Contact form with a service type dropdown and confirmation message.
+- **contact.html** - Physical address, embedded Google Map, phone number, WhatsApp link, and operating hours.
 
 **General features include:**
-- Fully responsive design for mobile, tablet, and desktop
-- Consistent navigation bar and footer across all pages
-- Fast loading times suitable for mobile data connections
-- High-contrast colours and readable fonts for accessibility
-- Alt text on all images for screen reader compatibility
+- Fully responsive design for mobile, tablet, and desktop.
+- Consistent navigation bar and footer across all pages.
+- Fast loading times suitable for mobile data connections.
+- High-contrast colours and readable fonts for accessibility.
+- Alt text on all images for screen reader compatibility.
 
 ---
 
@@ -68,10 +68,10 @@ The website will consist of six pages:
 | Visual Studio Code | Primary development IDE |
 
 **Colour Palette:**
-- Primary: Digital Blue `#0A74DA`
-- Background: Cloud White `#F5F7FA`
-- Accent: Sunrise Orange `#F28C28`
-- Text: Charcoal Black `#2B2B2B`
+- Primary: Digital Blue `#0A74DA`.
+- Background: Cloud White `#F5F7FA`.
+- Accent: Sunrise Orange `#F28C28`.
+- Text: Charcoal Black `#2B2B2B`.
 
 ---
 
@@ -110,11 +110,11 @@ The website will consist of six pages:
 
 Part 1 focuses on the planning and HTML foundation of the website. The following has been completed:
 
-- Project proposal document submitted, covering the organisation overview, website goals, current website analysis, proposed features, design decisions, technical requirements, timeline, budget, content sourcing strategy, and sitemap
-- GitHub repository created and configured
-- Initial file and folder structure set up
-- Wireframes designed for all six pages
-- Sitemap finalised
+- Project proposal document submitted, covering the organisation overview, website goals, current website analysis, proposed features, design decisions, technical requirements, timeline, budget, content sourcing strategy, and sitemap.
+- GitHub repository created and configured.
+- Initial file and folder structure set up.
+- Wireframes designed for all six pages.
+- Sitemap finalised.
 
 **File Structure:**
 
@@ -176,26 +176,20 @@ HOME
 
 | Version | Date | Changes |
 |---|---|---|
-| v0.1 | 23 Feb 2026 | Repository created, initial README added, project proposal completed |
-| v0.2 | 15 Apr 2026 | Initial HTML code pushed to GitHub repository |
-| v0.3 | 18 Apr 2026 | Images added to project and linked to the HTML structure |
-| v0.4 | 18 Apr 2026 | README.md created and added to repository |
-| v0.5 | 18 Apr 2026 | Made changes to the README.md file |
+| v0.1 | 23 Feb 2026 | Repository created, initial README added, project proposal completed. |
+| v0.2 | 15 Apr 2026 | Initial HTML code pushed to GitHub repository. |
+| v0.3 | 18 Apr 2026 | Images added to project and linked to the HTML structure. |
+| v0.4 | 18 Apr 2026 | README.md created and added to repository. |
+| v0.5 | 18 Apr 2026 | Made changes to the README.md file. |
 
 ---
 
 ## References
 
-ColorHunt, n.d. *Color Palettes for Designers and Artists*. [Online]. Available at: https://colorhunt.co. [Accessed 10 April 2026].
-
-FreePik, n.d. *Images*. [Online]. Available at: https://www.freepik.com. [Accessed 10 April 2026].
-
-GitHub, n.d. *GitHub Pages Documentation*. [Online]. Available at: https://docs.github.com/en/pages. [Accessed 10 April 2026].
-
-Google Fonts, n.d. *Free Fonts Library*. [Online]. Available at: https://fonts.google.com. [Accessed 10 April 2026].
-
-Host Africa, n.d. *Domain Registration in South Africa*. [Online]. Available at: https://hostafrica.co.za/domains/. [Accessed 10 April 2026].
-
-PSIRA, n.d. *PSIRA Online Services*. [Online]. Available at: https://www.psira.co.za/. [Accessed 10 April 2026].
-
-SARS, n.d. *SARS e-Filing Portal*. [Online]. Available at: https://www.sars.gov.za/. [Accessed 10 April 2026].
+- ColorHunt, n.d. *Color Palettes for Designers and Artists*. [Online]. Available at: https://colorhunt.co. [Accessed 10 April 2026].
+- FreePik, n.d. *Images*. [Online]. Available at: https://www.freepik.com. [Accessed 10 April 2026].
+- GitHub, n.d. *GitHub Pages Documentation*. [Online]. Available at: https://docs.github.com/en/pages. [Accessed 10 April 2026].
+- Google Fonts, n.d. *Free Fonts Library*. [Online]. Available at: https://fonts.google.com. [Accessed 10 April 2026].
+- Host Africa, n.d. *Domain Registration in South Africa*. [Online]. Available at: https://hostafrica.co.za/domains/. [Accessed 10 April 2026].
+- PSIRA, n.d. *PSIRA Online Services*. [Online]. Available at: https://www.psira.co.za/. [Accessed 10 April 2026].
+- SARS, n.d. *SARS e-Filing Portal*. [Online]. Available at: https://www.sars.gov.za/. [Accessed 10 April 2026].
