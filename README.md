@@ -12,26 +12,26 @@ The café currently has no online presence and relies entirely on physical marke
 
 ## Student Information
 
-**Full Name:** Axole Yokwana  
-**Student Number:** ST10515746  
-**Module:** WEDE5020w
+**Full Name:** Axole Yokwana.  
+**Student Number:** ST10515746.  
+**Module:** WEDE5020w.
 
 ---
 
 ## Website Goals and Objectives
 
 **Goals:**
-- Establish a professional online presence for Zok Internet Café
-- Centralise all service and pricing information in one place
-- Increase public awareness of government-related services offered, including SARS e-Filing, SASSA applications, and PSIRA registrations
-- Build trust with potential customers before they visit the café in person
+- Establish a professional online presence for Zok Internet Café.
+- Centralise all service and pricing information in one place.
+- Increase public awareness of government-related services offered, including SARS e-Filing, SASSA applications, and PSIRA registrations.
+- Build trust with potential customers before they visit the café in person.
 
 **Objectives:**
-- Reach 200 or more unique local visitors within the first two months of launch
-- Reduce in-store enquiries about pricing and availability by at least 30% within three months
-- Automate the enquiry process for specialised services via an online contact form
-- Ensure all key information is reachable within two clicks from the homepage
-- Grow the café's social media following by linking to Facebook and WhatsApp pages
+- Reach 200 or more unique local visitors within the first two months of launch.
+- Reduce in-store enquiries about pricing and availability by at least 30% within three months.
+- Automate the enquiry process for specialised services via an online contact form.
+- Ensure all key information is reachable within two clicks from the homepage.
+- Grow the café's social media following by linking to Facebook and WhatsApp pages.
 
 ---
 
@@ -39,19 +39,19 @@ The café currently has no online presence and relies entirely on physical marke
 
 The website will consist of six pages:
 
-- **index.html** - Homepage with a hero image, welcome message, call-to-action buttons, and operating hours
-- **about.html** - Business history, mission and vision statements, team overview, and community involvement
-- **services.html** - Full list of digital services with a pricing table, including printing, scanning, CV typing, and government service assistance
-- **products.html** - Stationery, tech accessories, airtime and data, refreshments, and SIM cards
-- **enquiry.html** - Contact form with a service type dropdown and confirmation message
-- **contact.html** - Physical address, embedded Google Map, phone number, WhatsApp link, and operating hours
+- **index.html** - Homepage with a hero image, welcome message, call-to-action buttons, and operating hours.
+- **about.html** - Business history, mission and vision statements, team overview, and community involvement.
+- **services.html** - Full list of digital services with a pricing table, including printing, scanning, CV typing, and government service assistance.
+- **products.html** - Stationery, tech accessories, airtime and data, refreshments, and SIM cards.
+- **enquiry.html** - Contact form with a service type dropdown and confirmation message.
+- **contact.html** - Physical address, embedded Google Map, phone number, WhatsApp link, and operating hours.
 
 **General features include:**
-- Fully responsive design for mobile, tablet, and desktop
-- Consistent navigation bar and footer across all pages
-- Fast loading times suitable for mobile data connections
-- High-contrast colours and readable fonts for accessibility
-- Alt text on all images for screen reader compatibility
+- Fully responsive design for mobile, tablet, and desktop.
+- Consistent navigation bar and footer across all pages.
+- Fast loading times suitable for mobile data connections.
+- High-contrast colours and readable fonts for accessibility.
+- Alt text on all images for screen reader compatibility.
 
 ---
 
@@ -68,10 +68,10 @@ The website will consist of six pages:
 | Visual Studio Code | Primary development IDE |
 
 **Colour Palette:**
-- Primary: Digital Blue `#0A74DA`
-- Background: Cloud White `#F5F7FA`
-- Accent: Sunrise Orange `#F28C28`
-- Text: Charcoal Black `#2B2B2B`
+- Primary: Digital Blue `#0A74DA`.
+- Background: Cloud White `#F5F7FA`.
+- Accent: Sunrise Orange `#F28C28`.
+- Text: Charcoal Black `#2B2B2B`.
 
 ---
 
@@ -110,11 +110,11 @@ The website will consist of six pages:
 
 Part 1 focuses on the planning and HTML foundation of the website. The following has been completed:
 
-- Project proposal document submitted, covering the organisation overview, website goals, current website analysis, proposed features, design decisions, technical requirements, timeline, budget, content sourcing strategy, and sitemap
-- GitHub repository created and configured
-- Initial file and folder structure set up
-- Wireframes designed for all six pages
-- Sitemap finalised
+- Project proposal document submitted, covering the organisation overview, website goals, current website analysis, proposed features, design decisions, technical requirements, timeline, budget, content sourcing strategy, and sitemap.
+- GitHub repository created and configured.
+- Initial file and folder structure set up.
+- Wireframes designed for all six pages.
+- Sitemap finalised.
 
 **File Structure:**
 
