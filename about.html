@@ -4,165 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Zok Internet Café</title>
+
+    <!-- Google Fonts for headings and body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External stylesheet shared by every page -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navigation bar with links to all six pages on the website -->
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About Us</a> |
-        <a href="services.html">Services</a> |
-        <a href="products.html">Products</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact Us</a>
+    <!-- Sticky navigation bar linking all six pages -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Zok Internet Café</a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu"><span></span></label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Page heading for the About Us page -->
-    <header>
+    <!-- Full width page heading -->
+    <header class="page-header">
         <h1>About Us</h1>
     </header>
 
     <main>
 
-        <!-- Three-column section: History, Mission Statement, and Vision Statement -->
-        <section>
-            <table>
-                <tr>
-                    <!-- History of the business explaining its origins and background -->
-                    <td>
-                        <h2>History of the Business</h2>
-                        <p>
-                            Zok Internet Café was founded to serve the residents of Thokoza who
-                            lacked convenient access to digital services. Starting as a small
-                            internet browsing station at the <strong>Impilo Shopping Centre</strong>,
-                            the café quickly grew to meet the community's needs for government
-                            service assistance, printing, and professional CV preparation.
-                        </p>
-                        <p>
-                            Over the years, Zok has become a trusted name in the area, known
-                            for its friendly service and commitment to making technology
-                            accessible to everyone regardless of their background.
-                        </p>
-                    </td>
-
-                    <!-- Mission statement describing the café's purpose and goals -->
-                    <td>
-                        <h2>Mission Statement</h2>
-                        <p>
-                            Our mission is to bridge the digital divide in Thokoza by providing
-                            affordable, reliable, and professional digital services to every
-                            member of our community. We strive to empower individuals through
-                            access to technology, helping them navigate government portals,
-                            prepare professional documents, and stay connected with the world.
-                        </p>
-                    </td>
-
-                    <!-- Vision statement outlining the café's aspirations for the future -->
-                    <td>
-                        <h2>Vision Statement</h2>
-                        <p>
-                            We envision a Thokoza where every resident has seamless access
-                            to digital services and technology. Zok Internet Café aims to be
-                            the leading community technology centre in the region, expanding
-                            our services to include digital literacy training and youth
-                            empowerment programmes.
-                        </p>
-                    </td>
-                </tr>
-            </table>
+        <!-- History of the business -->
+        <section class="container history">
+            <div class="intro-section">
+                <h2>Welcome to Zok Internet Café</h2>
+                <p class="intro-text">
+                    Zok Internet Café was founded to serve the residents of Thokoza who lacked convenient access to digital services. Starting as a small internet browsing station at Impilo Shopping Centre, the café quickly grew to meet the community's needs for government service assistance, printing, and professional CV preparation.
+                </p>
+                <p class="intro-text">
+                    Over the years, Zok has become a trusted name in the area, known for its friendly service and commitment to making technology accessible to everyone, regardless of their background.
+                </p>
+            </div>
         </section>
 
-        <hr>
+        <!-- Mission and vision in two equal columns -->
+        <section class="container belief-section">
+            <h2 class="section-title">What We Believe In</h2>
+            <div class="mv-grid">
+                <div class="mv-block">
+                    <h3>Mission Statement</h3>
+                    <p>
+                        Our mission is to bridge the digital divide in Thokoza by providing affordable, reliable, and professional digital services to every member of our community. We empower individuals through access to technology, helping them navigate government portals, prepare professional documents, and stay connected with the world.
+                    </p>
+                </div>
+                <div class="mv-block">
+                    <h3>Vision Statement</h3>
+                    <p>
+                        We envision a Thokoza where every resident has seamless access to digital services and technology. Zok Internet Café aims to be the leading community technology centre in the region, expanding to include digital literacy training and youth empowerment programmes.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-        <!-- Community involvement section showing partnerships and support -->
-        <section>
-            <h2>Our Community Involvement</h2>
-            <table>
-                <tr>
-                    <!-- Church partnership details -->
-                    <td>
+        <!-- Community involvement with two supporting columns -->
+        <section class="container">
+            <h2 class="section-title">Our Community Involvement</h2>
+            <div class="community-grid">
+                <article class="community-card">
+                    <img src="images/church-partnership.png" alt="Church members and clergy standing together inside a church, smiling at the camera.">
+                    <div class="community-card-body">
                         <h3>Church Partnership</h3>
-                        <img src="images/church-partnership.png" alt="Church members and clergy standing together inside a church, smiling at the camera." width="280">
                         <p>
-                            Zok Internet Café works closely with local churches in Thokoza to
-                            support community outreach programmes. Through this partnership,
-                            we offer discounted printing services for church newsletters and
-                            event materials, and provide free internet access for church
-                            administration tasks.
+                            Zok Internet Café works closely with local churches in Thokoza to support outreach programmes. We offer discounted printing for church newsletters and event materials, and free internet access for church administration tasks.
                         </p>
-                    </td>
+                    </div>
+                </article>
 
-                    <!-- Burial society support details -->
-                    <td>
+                <article class="community-card">
+                    <img src="images/burial-society-community.png" alt="Diverse group of community professionals smiling together in a modern office.">
+                    <div class="community-card-body">
                         <h3>Burial Society Support</h3>
-                        <img src="images/burial-society-community.png" alt="Diverse group of community professionals smiling together in a modern office." width="280">
                         <p>
-                            We proudly support local burial societies by assisting with the
-                            preparation of official documents, membership forms, and
-                            correspondence. Our team helps burial society members navigate
-                            government platforms such as Home Affairs and banking portals to
-                            ensure smooth processing of claims and paperwork.
+                            We support local burial societies by assisting with official documents, membership forms, and correspondence. Our team helps members navigate Home Affairs and banking portals to ensure smooth processing of claims and paperwork.
                         </p>
-                    </td>
-                </tr>
-            </table>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <hr>
+        <!-- Our team with three members -->
+        <section class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="team-grid">
+                <article class="team-card">
+                    <img class="team-photo" src="images/zokwanda-mthembu-headshot.png" alt="Professional portrait of Zokwanda Mthembu, owner of Zok Internet Café, wearing a light blue shirt in an office setting.">
+                    <h3>Zokwanda Mthembu</h3>
+                    <p class="role">Owner &amp; Founder</p>
+                    <p>Zokwanda founded the café with a passion for helping his community access digital services with ease.</p>
+                </article>
 
-        <!-- Our Team section introducing the owner and staff members -->
-        <section>
-            <h2>Our Team</h2>
-            <table>
-                <tr>
-                    <!-- Owner profile -->
-                    <td>
-                        <img src="images/zokwanda-mthembu-headshot.png" alt="Professional portrait of Zokwanda Mthembu, owner of Zok Internet Café, wearing a light blue shirt in an office setting." width="150">
-                        <br>
-                        <strong>Zokwanda Mthembu</strong>
-                        <br>
-                        Owner &amp; Founder
-                        <p>
-                            Zokwanda founded the café with a passion for helping his community
-                            access digital services with ease.
-                        </p>
-                    </td>
+                <article class="team-card">
+                    <img class="team-photo" src="images/thandi-nkosi-headshot.png" alt="Professional portrait of Thandi Nkosi smiling, wearing a gray blazer and white shirt.">
+                    <h3>Thandi Nkosi</h3>
+                    <p class="role">Senior Assistant</p>
+                    <p>Thandi specialises in government service applications and has helped hundreds of community members with SARS and SASSA queries.</p>
+                </article>
 
-                    <!-- Staff member 1 profile -->
-                    <td>
-                        <img src="images/thandi-nkosi-headshot.png" alt="Professional portrait of Thandi Nkosi smiling, wearing a gray blazer and white shirt." width="150">
-                        <br>
-                        <strong>Thandi Nkosi</strong>
-                        <br>
-                        Senior Assistant
-                        <p>
-                            Thandi specialises in government service applications and has helped
-                            hundreds of community members with SARS and SASSA queries.
-                        </p>
-                    </td>
-
-                    <!-- Staff member 2 profile -->
-                    <td>
-                        <img src="images/sipho-dlamini-headshot.png" alt="Portrait of Sipho Dlamini smiling while on a phone call in an office." width="150">
-                        <br>
-                        <strong>Sipho Dlamini</strong>
-                        <br>
-                        Technical Support
-                        <p>
-                            Sipho manages printing, scanning, and IT support, ensuring all
-                            equipment runs smoothly for our customers.
-                        </p>
-                    </td>
-                </tr>
-            </table>
+                <article class="team-card">
+                    <img class="team-photo" src="images/sipho-dlamini-headshot.png" alt="Portrait of Sipho Dlamini smiling while on a phone call in an office.">
+                    <h3>Sipho Dlamini</h3>
+                    <p class="role">Technical Support</p>
+                    <p>Sipho manages printing, scanning, and IT support, ensuring all equipment runs smoothly for our customers.</p>
+                </article>
+            </div>
         </section>
 
     </main>
 
-    <!-- Footer with copyright and contact summary -->
-    <footer>
-        <hr>
-        <p>&copy; 2026 Zok Internet Café. All rights reserved.</p>
+    <!-- Full width footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Zok Internet Café</h4>
+                    <p>Your community digital hub in Thokoza, helping people connect, print and access government services.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit Us</h4>
+                    <ul>
+                        <li>Impilo Shopping Centre, Thokoza</li>
+                        <li>Mon to Fri: 08:00 to 17:00</li>
+                        <li>Sat: 08:00 to 14:00</li>
+                        <li>Sun &amp; Public Holidays: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zok Internet Café. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
 </body>

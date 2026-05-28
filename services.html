@@ -4,135 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Zok Internet Café</title>
+
+    <!-- Google Fonts for headings and body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External stylesheet shared by every page -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navigation bar with links to all six pages on the website -->
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About Us</a> |
-        <a href="services.html">Services</a> |
-        <a href="products.html">Products</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact Us</a>
+    <!-- Sticky navigation bar linking all six pages -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Zok Internet Café</a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu"><span></span></label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Page heading for the Services page -->
-    <header>
+    <!-- Full width page heading -->
+    <header class="page-header">
         <h1>Our Services</h1>
     </header>
 
     <main>
 
-        <!-- Service category navigation allowing users to quickly identify service types -->
-        <section>
-            <strong>
-                Printing | Scanning | Government Services | CV Typing | Other
-            </strong>
+        <!-- Service introduction -->
+        <section class="container service-intro">
+            <div class="intro-section">
+                <p class="intro-text">
+                    At Zok Internet Café, we provide professional digital services tailored to meet the unique needs of our Thokoza community. From government portal assistance to professional document preparation, we're here to help you navigate technology with confidence.
+                </p>
+            </div>
         </section>
 
-        <hr>
+        <!-- Service grid, three columns across two rows -->
+        <section class="container">
+            <h2 class="section-title">Services We Offer</h2>
+            <div class="service-grid">
+                <article class="service-card" id="printing">
+                    <img src="images/services-printing-scanning.png" alt="Person placing a document on a flatbed office scanner.">
+                    <div class="service-card-body">
+                        <h3>Printing</h3>
+                        <p>Black and white and colour printing for documents, IDs, and photographs. Single pages and bulk orders welcome.</p>
+                        <p class="price">From R2.00 per page</p>
+                    </div>
+                </article>
 
-        <!-- Service cards displayed in a grid: 2 rows of 3 cards each -->
-        <section>
-            <h2>Services We Offer</h2>
+                <article class="service-card" id="scanning">
+                    <img src="images/printing-scanning.png" alt="Person collecting printed documents from a modern office printer while holding a smartphone.">
+                    <div class="service-card-body">
+                        <h3>Scanning</h3>
+                        <p>High quality document scanning to digital format. Ideal for archiving IDs, certificates and important paperwork.</p>
+                        <p class="price">From R5.00 per page</p>
+                    </div>
+                </article>
 
-            <table>
-                <!-- First row of service cards -->
-                <tr>
-                    <!-- Service card 1: Printing -->
-                    <td>
-                        <img src="images/services-printing-scanning.png" alt="Person placing a document on a flatbed office scanner." width="200">
-                        <br>
-                        <strong>Printing</strong>
-                        <p>
-                            Black &amp; white and colour printing for documents, IDs, and
-                            photographs. We handle single pages and bulk orders.
-                        </p>
-                        <p><strong>Price:</strong> From R2.00 per page</p>
-                    </td>
+                <article class="service-card service-card-logo" id="government">
+                    <img src="images/sars-logo.png" alt="South African Revenue Service (SARS) logo">
+                    <div class="service-card-body">
+                        <h3>SARS e-Filing</h3>
+                        <p>Expert help with SARS e-Filing, including tax return submissions, compliance letters, and account queries.</p>
+                        <p class="price">From R50.00 per session</p>
+                    </div>
+                </article>
 
-                    <!-- Service card 2: Scanning -->
-                    <td>
-                        <img src="images/printing-scanning.png" alt="Person collecting printed documents from a modern office printer while holding a smartphone." width="200">
-                        <br>
-                        <strong>Scanning</strong>
-                        <p>
-                            High-quality document scanning to digital format. Ideal for
-                            archiving important documents, IDs, and certificates.
-                        </p>
-                        <p><strong>Price:</strong> From R5.00 per page</p>
-                    </td>
+                <article class="service-card" id="cv-typing">
+                    <img src="images/cv-typing.png" alt="Person at a desk comparing printed CVs with a document open on a computer monitor.">
+                    <div class="service-card-body">
+                        <h3>CV Typing</h3>
+                        <p>Professional CV typing and formatting to help you stand out. We also assist with cover letters and motivations.</p>
+                        <p class="price">From R50.00 per CV</p>
+                    </div>
+                </article>
 
-                    <!-- Service card 3: SARS e-Filing government assistance -->
-                    <td>
-                        <img src="images/sars-logo.png" alt="South African Revenue Service (SARS) logo" width="200">
-                        <br>
-                        <strong>SARS e-Filing</strong>
-                        <p>
-                            Expert assistance with SARS e-Filing, including tax return
-                            submissions, tax compliance letters, and account queries.
-                        </p>
-                        <p><strong>Price:</strong> From R50.00 per session</p>
-                    </td>
-                </tr>
+                <article class="service-card service-card-logo">
+                    <img src="images/psira-logo.png" alt="PSIRA (Private Security Industry Regulatory Authority) logo">
+                    <div class="service-card-body">
+                        <h3>PSIRA Registration</h3>
+                        <p>Assistance with PSIRA new registrations and annual renewals for security officers.</p>
+                        <p class="price">From R80.00 per application</p>
+                    </div>
+                </article>
 
-                <!-- Second row of service cards -->
-                <tr>
-                    <!-- Service card 4: CV Typing -->
-                    <td>
-                        <img src="images/cv-typing.png" alt="Person at a desk comparing printed CVs with a document open on a computer monitor." width="200">
-                        <br>
-                        <strong>CV Typing</strong>
-                        <p>
-                            Professional CV typing and formatting to help you stand out to
-                            employers. We also assist with cover letters and motivational
-                            statements.
-                        </p>
-                        <p><strong>Price:</strong> From R50.00 per CV</p>
-                    </td>
-
-                    <!-- Service card 5: PSIRA Registration for security personnel -->
-                    <td>
-                        <img src="images/psira-logo.png" alt="PSIRA (Private Security Industry Regulatory Authority) logo" width="200">
-                        <br>
-                        <strong>PSIRA Registration</strong>
-                        <p>
-                            Assistance with PSIRA (Private Security Industry Regulatory Authority)
-                            new registrations and annual renewals for security officers.
-                        </p>
-                        <p><strong>Price:</strong> From R80.00 per application</p>
-                    </td>
-
-                    <!-- Service card 6: Other general services -->
-                    <td>
-                        <img src="images/other-services.png" alt="Colourful school and office supplies: notebooks, pencils, markers, and a calculator." width="200">
-                        <br>
-                        <strong>Other Services</strong>
-                        <p>
-                            Laminating, photocopying, internet browsing, email assistance,
-                            SASSA grant applications, and student research support.
-                        </p>
-                        <p><strong>Price:</strong> Varies by service</p>
-                    </td>
-                </tr>
-            </table>
+                <article class="service-card" id="other">
+                    <img src="images/other-services.png" alt="Colourful school and office supplies: notebooks, pencils, markers, and a calculator.">
+                    <div class="service-card-body">
+                        <h3>Other Services</h3>
+                        <p>Laminating, photocopying, internet browsing, email help, SASSA grant applications, and student research support.</p>
+                        <p class="price">Varies by service</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <hr>
-
-        <!-- Call-to-action button linking to the enquiry form for service requests -->
-        <section>
-            <p>Interested in any of our services? Get in touch with us today!</p>
-            <a href="enquiry.html"><strong>Enquire Now &rarr;</strong></a>
+        <!-- Full width enquire now bar -->
+        <section class="cta-bar">
+            <div class="container">
+                <p>Interested in any of our services? Get in touch with us today.</p>
+                <a href="enquiry.html" class="btn btn-primary">Enquire Now</a>
+            </div>
         </section>
 
     </main>
 
-    <!-- Footer with copyright and contact summary -->
-    <footer>
-        <hr>
-        <p>&copy; 2026 Zok Internet Café. All rights reserved.</p>
+    <!-- Full width footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Zok Internet Café</h4>
+                    <p>Your community digital hub in Thokoza, helping people connect, print and access government services.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit Us</h4>
+                    <ul>
+                        <li>Impilo Shopping Centre, Thokoza</li>
+                        <li>Mon to Fri: 08:00 to 17:00</li>
+                        <li>Sat: 08:00 to 14:00</li>
+                        <li>Sun &amp; Public Holidays: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zok Internet Café. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
 </body>

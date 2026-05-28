@@ -4,113 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | Zok Internet Café</title>
+
+    <!-- Google Fonts for headings and body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External stylesheet shared by every page -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navigation bar with links to all six pages on the website -->
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About Us</a> |
-        <a href="services.html">Services</a> |
-        <a href="products.html">Products</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact Us</a>
+    <!-- Sticky navigation bar linking all six pages -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Zok Internet Café</a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu"><span></span></label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Page heading for the Products page -->
-    <header>
+    <!-- Full width page heading -->
+    <header class="page-header">
         <h1>Our Products</h1>
     </header>
 
     <main>
 
-        <!-- Product category navigation for quick browsing by category -->
-        <section>
-            <strong>
-                Stationery | Tech Accessories | Airtime &amp; Data | Refreshments
-            </strong>
+        <!-- Products page introduction -->
+        <section class="container products-intro">
+            <div class="intro-section">
+                <h2>Shop With Us</h2>
+                <p class="intro-text">
+                    Beyond our services, we stock a variety of essential products conveniently available at our Thokoza location. Visit us to browse our selection of stationery, tech accessories, airtime, and refreshments.
+                </p>
+            </div>
         </section>
 
-        <hr>
+        <!-- Product listings grouped by category in a two column grid -->
+        <section class="container">
 
-        <!-- Product cards displayed in a grid: 2 rows of 3 cards each -->
-        <section>
-            <h2>Products Available In-Store</h2>
+            <div class="product-category" id="stationery">
+                <h2>Stationery</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="images/pens-folders.png" alt="Colourful office ring binder folders, a pen, and a hole punch on a white desk.">
+                        <div>
+                            <h3>Pens &amp; Folders</h3>
+                            <p class="price">From R5.00</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
 
-            <table>
-                <!-- First row of product cards -->
-                <tr>
-                    <!-- Product card 1: Pens and Folders (Stationery) -->
-                    <td>
-                        <img src="images/pens-folders.png" alt="Colourful office ring binder folders, a pen, and a hole punch on a white desk." width="200">
-                        <br>
-                        <strong>Pens &amp; Folders</strong>
-                        <p><strong>Price:</strong> From R5.00</p>
-                    </td>
+            <div class="product-category" id="tech">
+                <h2>Tech Accessories</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="images/usb-flash-drive.png" alt="White and silver swivel USB flash drive on a purple mat beside a keyboard and mouse.">
+                        <div>
+                            <h3>USB Flash Drives</h3>
+                            <p class="price">From R60.00</p>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="images/phone-chargers.png" alt="Smartphone with wall charger, wireless charging pad, and power bank on a wooden surface.">
+                        <div>
+                            <h3>Phone Chargers</h3>
+                            <p class="price">From R35.00</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
 
-                    <!-- Product card 2: USB Flash Drives (Tech Accessories) -->
-                    <td>
-                        <img src="images/usb-flash-drive.png" alt="White and silver swivel USB flash drive on a purple mat beside a keyboard and mouse." width="200">
-                        <br>
-                        <strong>USB Flash Drives</strong>
-                        <p><strong>Price:</strong> From R60.00</p>
-                    </td>
+            <div class="product-category" id="airtime">
+                <h2>Airtime &amp; Data</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="images/airtime-vouchers.png" alt="South African mobile network logos: Vodacom, MTN, Cell C, and Telkom Mobile.">
+                        <div>
+                            <h3>Airtime Vouchers</h3>
+                            <p class="price">From R5.00</p>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <img src="images/sim-cards.png" alt="Hands holding a smartphone showing a SIM icon, with two physical SIM cards on a blue background.">
+                        <div>
+                            <h3>Sim Cards</h3>
+                            <p class="price">Free (RICA required)</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
 
-                    <!-- Product card 3: Phone Chargers (Tech Accessories) -->
-                    <td>
-                        <img src="images/phone-chargers.png" alt="Smartphone with wall charger, wireless charging pad, and power bank on a wooden surface." width="200">
-                        <br>
-                        <strong>Phone Chargers</strong>
-                        <p><strong>Price:</strong> From R35.00</p>
-                    </td>
-                </tr>
+            <div class="product-category" id="refreshments">
+                <h2>Refreshments</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <img src="images/cold-drinks.png" alt="Chilled Coca-Cola, Fanta Orange, and Sprite cans with condensation on a dark surface.">
+                        <div>
+                            <h3>Cold Drinks</h3>
+                            <p class="price">From R12.00</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
 
-                <!-- Second row of product cards -->
-                <tr>
-                    <!-- Product card 4: Airtime Vouchers (Airtime and Data) -->
-                    <td>
-                        <img src="images/airtime-vouchers.png" alt="South African mobile network logos: Vodacom, MTN, Cell C, and Telkom Mobile." width="200">
-                        <br>
-                        <strong>Airtime Vouchers</strong>
-                        <p><strong>Price:</strong> From R5.00</p>
-                    </td>
-
-                    <!-- Product card 5: Sim Cards (Airtime and Data) -->
-                    <td>
-                        <img src="images/sim-cards.png" alt="Hands holding a smartphone showing a SIM icon, with two physical SIM cards on a blue background." width="200">
-                        <br>
-                        <strong>Sim Cards</strong>
-                        <p><strong>Price:</strong> Free (RICA required)</p>
-                    </td>
-
-                    <!-- Product card 6: Cold Drinks (Refreshments) -->
-                    <td>
-                        <img src="images/cold-drinks.png" alt="Chilled Coca-Cola, Fanta Orange, and Sprite cans with condensation on a dark surface." width="200">
-                        <br>
-                        <strong>Cold Drinks</strong>
-                        <p><strong>Price:</strong> From R12.00</p>
-                    </td>
-                </tr>
-            </table>
         </section>
 
-        <hr>
-
-        <!-- Message encouraging customers to visit the physical store -->
-        <section>
-            <p><strong>Visit us in-store to purchase!</strong></p>
-            <p>
-                All products are available at our Impilo Shopping Centre location in Thokoza.
-                Prices may vary. Stock is subject to availability.
-            </p>
+        <!-- Full width visit us in store bar -->
+        <section class="visit-bar">
+            <div class="container">
+                <h2>Visit Us In-Store</h2>
+                <p>All products are available at our Impilo Shopping Centre location in Thokoza. Prices may vary and stock is subject to availability.</p>
+            </div>
         </section>
 
     </main>
 
-    <!-- Footer with copyright and contact summary -->
-    <footer>
-        <hr>
-        <p>&copy; 2026 Zok Internet Café. All rights reserved.</p>
+    <!-- Full width footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Zok Internet Café</h4>
+                    <p>Your community digital hub in Thokoza, helping people connect, print and access government services.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit Us</h4>
+                    <ul>
+                        <li>Impilo Shopping Centre, Thokoza</li>
+                        <li>Mon to Fri: 08:00 to 17:00</li>
+                        <li>Sat: 08:00 to 14:00</li>
+                        <li>Sun &amp; Public Holidays: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zok Internet Café. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
 </body>

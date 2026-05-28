@@ -4,110 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Zok Internet Café</title>
+
+    <!-- Google Fonts for headings and body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External stylesheet shared by every page -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navigation bar with links to all six pages on the website -->
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About Us</a> |
-        <a href="services.html">Services</a> |
-        <a href="products.html">Products</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact Us</a>
+    <!-- Sticky navigation bar linking all six pages -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Zok Internet Café</a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu"><span></span></label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Page heading for the Contact Us page -->
-    <header>
+    <!-- Full width page heading -->
+    <header class="page-header">
         <h1>Contact Us</h1>
     </header>
 
     <main>
 
-        <!-- Two-column layout: contact form on the left, map and details on the right -->
-        <table>
-            <tr>
-                <!-- Left column: contact form for sending a message -->
-                <td>
-                    <h2>Contact Us</h2>
+        <!-- Contact page introduction -->
+        <section class="container contact-intro">
+            <div class="intro-section">
+                <h2>Get In Touch</h2>
+                <p class="intro-text">
+                    Have a question or need assistance? We'd love to hear from you. Reach out to our team and we'll be happy to help.
+                </p>
+            </div>
+        </section>
 
+        <!-- Two columns: contact form on the left, map and details on the right -->
+        <section class="container">
+            <div class="contact-grid">
+
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
                     <form action="#" method="post">
 
-                        <!-- Name and Surname input field -->
-                        <label for="full-name">Name &amp; Surname:</label>
-                        <br>
+                        <label for="full-name">Name &amp; Surname</label>
                         <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
-                        <br><br>
 
-                        <!-- Email address input field -->
-                        <label for="email">Email:</label>
-                        <br>
+                        <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                        <br><br>
 
-                        <!-- Subject line input field -->
-                        <label for="subject">Subject:</label>
-                        <br>
+                        <label for="subject">Subject</label>
                         <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
-                        <br><br>
 
-                        <!-- Message text area for the body of the enquiry -->
-                        <label for="message">Message:</label>
-                        <br>
-                        <textarea id="message" name="message" rows="6" cols="40" placeholder="Write your message here..."></textarea>
-                        <br><br>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Write your message here..."></textarea>
 
-                        <!-- Submit button to send the contact form -->
-                        <button type="submit">Contact Us</button>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
 
                     </form>
-                </td>
+                </div>
 
-                <!-- Right column: Google Maps embed and contact details -->
-                <td>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
 
-                    <!-- Embedded Google Map showing the café location in Thokoza -->
-                    <h2>Our Location</h2>
+                    <div class="contact-details">
+                        <p class="detail-item">
+                            <strong>Phone:</strong><br>
+                            076 087 5444
+                        </p>
+                        <p class="detail-item">
+                            <strong>WhatsApp:</strong><br>
+                            <a href="https://wa.me/27760875444">Chat on WhatsApp</a>
+                        </p>
+                        <p class="detail-item">
+                            <strong>Email:</strong><br>
+                            <a href="mailto:zokinternatecafe@gmail.com">zokinternatecafe@gmail.com</a>
+                        </p>
+                        <p class="detail-item">
+                            <strong>Location:</strong><br>
+                            Impilo Shopping Centre<br>
+                            Thokoza, Gauteng
+                        </p>
+                        <p class="detail-item">
+                            <strong>Operating Hours:</strong><br>
+                            Monday to Friday: 08:00 to 17:00<br>
+                            Saturday: 08:00 to 14:00<br>
+                            Sunday &amp; Public Holidays: Closed
+                        </p>
+                    </div>
+
+                    <h3>Our Location</h3>
+                    <!-- Embedded map of the Thokoza area -->
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.2!2d28.23!3d-26.42!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDI1JzEyLjAiUyAyOMKwMTMnNDguMCJF!5e0!3m2!1sen!2sza!4v1"
-                        width="400"
-                        height="250"
                         allowfullscreen=""
                         loading="lazy"
                         title="Google Map showing the location of Zok Internet Café in Thokoza">
                     </iframe>
-                    <br>
-                    <p><strong>Location of Zok Internet Café, Thokoza</strong></p>
+                </div>
 
-                    <hr>
-
-                    <!-- Contact details: phone, WhatsApp, email, and operating hours -->
-                    <h3>Get In Touch</h3>
-                    <ul>
-                        <li><strong>Phone Number:</strong> 076 087 5444</li>
-                        <li><strong>WhatsApp:</strong> <a href="https://wa.me/27760875444">Chat on WhatsApp</a></li>
-                        <li><strong>Email Address:</strong> <a href="mailto:zokinternatecafe@gmail.com">zokinternatecafe@gmail.com</a></li>
-                        <li>
-                            <strong>Operating Hours:</strong>
-                            <br>
-                            Monday &ndash; Friday: 08:00 &ndash; 17:00
-                            <br>
-                            Saturday: 08:00 &ndash; 14:00
-                            <br>
-                            Sunday &amp; Public Holidays: Closed
-                        </li>
-                    </ul>
-
-                </td>
-            </tr>
-        </table>
+            </div>
+        </section>
 
     </main>
 
-    <!-- Footer with copyright and contact summary -->
-    <footer>
-        <hr>
-        <p>&copy; 2026 Zok Internet Café. All rights reserved.</p>
+    <!-- Full width footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Zok Internet Café</h4>
+                    <p>Your community digital hub in Thokoza, helping people connect, print and access government services.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit Us</h4>
+                    <ul>
+                        <li>Impilo Shopping Centre, Thokoza</li>
+                        <li>Mon to Fri: 08:00 to 17:00</li>
+                        <li>Sat: 08:00 to 14:00</li>
+                        <li>Sun &amp; Public Holidays: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zok Internet Café. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
 </body>

@@ -4,104 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Zok Internet Café</title>
+
+    <!-- Google Fonts for headings and body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External stylesheet shared by every page -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navigation bar with links to all six pages on the website -->
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About Us</a> |
-        <a href="services.html">Services</a> |
-        <a href="products.html">Products</a> |
-        <a href="enquiry.html">Enquiry</a> |
-        <a href="contact.html">Contact Us</a>
+    <!-- Sticky navigation bar linking all six pages -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Zok Internet Café</a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu"><span></span></label>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Header section containing the welcome message heading -->
-    <header>
+    <!-- Full width welcome heading -->
+    <header class="page-header">
         <h1>Welcome to Zok Internet Café</h1>
     </header>
 
     <main>
 
-        <!-- Hero section: hero image, then introduction -->
-        <section>
-            <img src="images/hero-cafe-collaboration.png" alt="Three people collaborating over documents and a laptop at a table in a warm café setting." width="600">
-            <br><br>
-            <h2>Your Community Digital Hub</h2>
-            <p>
-                Zok Internet Café is your one-stop destination for all digital and administrative
-                needs in Thokoza. Conveniently located at <strong>Impilo Shopping Centre</strong>,
-                we make technology accessible and affordable for everyone in our community.
-            </p>
-            <p>
-                Whether you need help with government services, professional document preparation,
-                or simply reliable internet access, our friendly team is here to assist you.
-            </p>
-
-            <!-- Button linking visitors to the services page for more details -->
-            <br>
-            <a href="services.html"><strong>View Our Services &rarr;</strong></a>
-
+        <!-- Hero image with tagline, intro and a call to action -->
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-banner">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="images/hero-cafe-collaboration-480.png">
+                        <source media="(max-width: 900px)" srcset="images/hero-cafe-collaboration-800.png">
+                        <img class="hero-img"
+                             src="images/hero-cafe-collaboration.png"
+                             srcset="images/hero-cafe-collaboration-480.png 480w, images/hero-cafe-collaboration-800.png 800w, images/hero-cafe-collaboration.png 1024w"
+                             sizes="(min-width: 1100px) 1100px, 100vw"
+                             alt="Three people collaborating over documents and a laptop at a table in a warm café setting.">
+                    </picture>
+                </div>
+                <div class="hero-content">
+                    <span class="tagline">Your Community Digital Hub</span>
+                    <h2>Technology made accessible for everyone in Thokoza</h2>
+                    <p>
+                        Zok Internet Café is your one-stop destination for digital and administrative
+                        needs. Located at Impilo Shopping Centre, we make printing, government services
+                        and reliable internet affordable for the whole community.
+                    </p>
+                    <a href="services.html" class="btn btn-primary">View Our Services</a>
+                </div>
+            </div>
         </section>
 
-        <hr>
+        <!-- Three featured service highlights -->
+        <section class="container offer-section">
+            <h2 class="section-title">What We Offer</h2>
+            <p class="section-intro">Reliable digital services and everyday essentials, all in one place at Impilo Shopping Centre.</p>
+            <div class="card-grid">
+                <article class="card card-logo">
+                    <img src="images/sars-logo.png" alt="South African Revenue Service (SARS) logo">
+                    <div class="card-body">
+                        <h3>Government Services</h3>
+                        <p>SARS, SASSA and PSIRA assistance for all your official needs.</p>
+                    </div>
+                </article>
 
-        <!-- Three service highlight icons representing key service categories -->
-        <section>
-            <h2>What We Offer</h2>
-            <table>
-                <tr>
-                    <!-- Service icon 1: Government services -->
-                    <td>
-                        <img src="images/sars-logo.png" alt="South African Revenue Service (SARS) logo" width="180">
-                        <br>
-                        <strong>Government Services</strong>
-                        <br>
-                        SARS, SASSA &amp; PSIRA
-                    </td>
+                <article class="card">
+                    <img src="images/printing-scanning.png" alt="Person collecting printed documents from a modern office printer while holding a smartphone.">
+                    <div class="card-body">
+                        <h3>Printing &amp; Scanning</h3>
+                        <p>Documents, IDs and photos printed and scanned in minutes.</p>
+                    </div>
+                </article>
 
-                    <!-- Service icon 2: Printing and scanning -->
-                    <td>
-                        <img src="images/printing-scanning.png" alt="Person collecting printed documents from a modern office printer while holding a smartphone." width="180">
-                        <br>
-                        <strong>Printing &amp; Scanning</strong>
-                        <br>
-                        Documents, IDs &amp; Photos
-                    </td>
-
-                    <!-- Service icon 3: CV typing and internet -->
-                    <td>
-                        <img src="images/cv-typing.png" alt="Person at a desk comparing printed CVs with a document open on a computer monitor." width="180">
-                        <br>
-                        <strong>CV Typing &amp; Internet</strong>
-                        <br>
-                        Professional CVs &amp; WiFi
-                    </td>
-                </tr>
-            </table>
-        </section>
-
-        <hr>
-
-        <!-- Operating hours and physical address information -->
-        <section>
-            <h2>Operating Hours &amp; Address</h2>
-            <p><strong>Address:</strong> Impilo Shopping Centre, Thokoza, Gauteng</p>
-            <p><strong>Operating Hours:</strong></p>
-            <ul>
-                <li>Monday &ndash; Friday: 08:00 &ndash; 17:00</li>
-                <li>Saturday: 08:00 &ndash; 14:00</li>
-                <li>Sunday &amp; Public Holidays: Closed</li>
-            </ul>
+                <article class="card">
+                    <img src="images/cv-typing.png" alt="Person at a desk comparing printed CVs with a document open on a computer monitor.">
+                    <div class="card-body">
+                        <h3>CV Typing &amp; Internet</h3>
+                        <p>Professional CVs, email help and dependable WiFi access.</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
     </main>
 
-    <!-- Footer with copyright and contact summary -->
-    <footer>
-        <hr>
-        <p>&copy; 2026 Zok Internet Café. All rights reserved.</p>
+    <!-- Full width footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Zok Internet Café</h4>
+                    <p>Your community digital hub in Thokoza, helping people connect, print and access government services.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Visit Us</h4>
+                    <ul>
+                        <li>Impilo Shopping Centre, Thokoza</li>
+                        <li>Mon to Fri: 08:00 to 17:00</li>
+                        <li>Sat: 08:00 to 14:00</li>
+                        <li>Sun &amp; Public Holidays: Closed</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Zok Internet Café. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
 </body>
