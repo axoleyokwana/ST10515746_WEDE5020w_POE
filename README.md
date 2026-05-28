@@ -326,7 +326,7 @@ The tablet breakpoint activates at 768px width, reducing font sizes slightly and
 Shows the full homepage layout with the sticky navigation bar displaying all menu links inline with an orange underline on "Home". The hero section displays the café image and the welcome card with call-to-action button. Below shows the "What We Offer" section with cards in a responsive layout.
 
 **Screenshot 2 - What We Offer and Footer on iPad Air:**
-Demonstrates the three-column card grid and three-column footer on a tablet screen, with Quick Links and Visit Us information displayed side by side.
+Demonstrates the three-column card grid and three-column footer on a tablet screen, with Quick Links and Visit Us information displayed side by side.    
 
 ### Desktop
 
