@@ -63,10 +63,11 @@ The website consists of six fully styled pages:
 | Technology | Purpose |
 |---|---|
 | HTML5 | Semantic page structure |
-| CSS3 | Styling, Flexbox/Grid layouts, media queries |
-| JavaScript | Client-side form validation *(planned for Part 3)* |
+| CSS3 | Styling, Flexbox/Grid layouts, media queries, animations |
+| JavaScript | Interactive elements, form validation, DOM manipulation |
+| jQuery 3.7.1 | Accordion, tabs, lightbox and AJAX helpers (loaded from CDN) |
+| Leaflet.js 1.9.4 | Interactive OpenStreetMap on the contact page (loaded from CDN) |
 | Google Fonts | Poppins and Open Sans typefaces |
-| Font Awesome | Icons for services and navigation *(planned for Part 3)* |
 | GitHub Pages | Free static site hosting |
 | Visual Studio Code | Primary development IDE |
 
@@ -103,9 +104,9 @@ The website consists of six fully styled pages:
 
 | Week | Dates | Deliverable |
 |---|---|---|
-| 10 | TBC | Form validation, interactive elements, image gallery, SEO basics |
-| 11 | TBC | Accessibility audit, screen reader testing, animations, AJAX form |
-| 12 | TBC | Final testing across all devices, **Part 3 submission (TBC)** |
+| 10 | 09 Jun 2026 | jQuery and Leaflet CDN setup, interactive accordion, tabs and lightbox |
+| 11 | 16 Jun 2026 | Form validation (enquiry and contact), search filter, scroll animations, SEO |
+| 12 | 18 Jun 2026 | Final testing across all devices, README update, **Part 3 submission (18 June)** |
 
 ---
 
@@ -129,6 +130,8 @@ Zok-internet-cafe/
 ├── products.html
 ├── enquiry.html
 ├── contact.html
+├── robots.txt
+├── sitemap.xml
 ├── css/
 │   └── style.css
 ├── images/
@@ -142,12 +145,15 @@ Zok-internet-cafe/
 │   ├── responsiveness-s25-1.png
 │   ├── responsiveness-s25-2.png
 │   └── (service, product and team images)
-└── js/          *(planned for Part 3)*
+└── js/
+    ├── main.js
+    └── form-validation.js
 ```
 
 ---
 
 ## Part 2 Details
+
 
 Part 2 adds the full visual layer and responsive behaviour on top of the Part 1 HTML foundation. All styling is handled by a single external stylesheet linked from every page. The following has been completed:
 
@@ -248,6 +254,51 @@ HOME
 
 ---
 
+## Part 3 Details
+
+Part 3 adds JavaScript interactivity, client-side form validation, search engine optimisation and dynamic content features to the website. Two JavaScript files are loaded on every page via `<script>` tags before the closing `</body>` tag. jQuery 3.7.1 is loaded from a CDN for interactive elements, and Leaflet.js 1.9.4 is loaded on the contact page for the interactive map.
+
+### JavaScript Foundation
+
+- **jQuery 3.7.1:** Loaded from the official jQuery CDN on all six pages. Used for the FAQ accordion, product tabs, lightbox gallery and form validation helpers.
+- **Leaflet.js 1.9.4:** Loaded from the unpkg CDN on the contact page only. Leaflet CSS is linked in the `<head>` and the JavaScript file is loaded before `main.js`.
+- **main.js:** Shared script loaded on every page. Handles the accordion, tabs, lightbox, search filter, Leaflet map initialisation, scroll-in animations and back-to-top button.
+- **form-validation.js:** Loaded on the enquiry and contact pages only. Handles client-side validation, error messages and form submission responses.
+
+### Interactive Elements
+
+- **FAQ Accordion (services.html):** Five frequently asked questions are displayed below the service grid. Clicking a question toggles the answer open with jQuery `slideToggle()`. Only one answer is visible at a time. A plus/minus icon indicates the open state.
+- **Product Tabs (products.html):** A tab bar above the product categories allows filtering by category (All Products, Stationery, Tech Accessories, Airtime and Data, Refreshments). Clicking a tab shows the matching category with a jQuery `fadeIn()` transition and hides the rest.
+- **Image Lightbox Gallery (about.html):** Clicking any community or team photo opens it in a full-screen overlay. A close button and clicking the dark overlay background close the lightbox. The Escape key also closes it.
+- **Interactive Map (contact.html):** An interactive Leaflet map using OpenStreetMap tiles replaces the previous Google Maps iframe. A marker with a popup shows the café location at Impilo Shopping Centre, Thokoza. No API key is required.
+- **Scroll-in Animations:** Sections with the class `.animate-on-scroll` start with zero opacity and slide upwards as they enter the viewport. The `IntersectionObserver` API triggers the animation once per element.
+- **Back-to-Top Button:** A circular orange button appears in the bottom right corner after the user scrolls past 400 pixels. Clicking it smoothly scrolls the page back to the top.
+
+### Dynamic Content and Search
+
+- **Live Search Filter (services.html):** A search input above the service grid filters cards in real time as the user types. The filter matches against each card's text content, hiding non-matching cards instantly.
+- **Product Tab Filtering (products.html):** Product categories are dynamically shown and hidden using jQuery DOM manipulation when the user selects a tab.
+
+### Form Validation
+
+- **Enquiry Form (enquiry.html):** The form collects first name, last name, email, contact number, service type and an optional message. JavaScript validates each field on blur and again on submit. Validation includes character length checks, South African phone number format (10 digits starting with 0), and email format. Inline error messages appear below invalid fields in red. On successful validation, a response modal displays the user's name, selected service and relevant pricing or availability information.
+- **Contact Form (contact.html):** The form collects name and surname, email, message type (General Enquiry, Complaint, Feedback, Partnership), subject and message. JavaScript validates all fields on blur and submit. On successful validation, the form data is compiled into a `mailto:` link addressed to `zokinternatecafe@gmail.com` with the subject and body pre-filled. The user's email client opens with the message ready to send. A success modal confirms the action.
+- **Error Handling:** Invalid fields receive a red border (`.input-error`) and valid fields receive a green border (`.input-success`). Error messages are displayed in `<span class="error-msg">` elements below each field.
+
+### Search Engine Optimisation (SEO)
+
+- **Meta Descriptions and Keywords:** Every page has a unique `<meta name="description">` and `<meta name="keywords">` tag in the `<head>` with relevant content for search engine indexing.
+- **Title Tags:** Each page has a descriptive `<title>` tag following the format "Page Name | Zok Internet Café".
+- **Header Tags:** All pages use a single `<h1>` in the page header band, with `<h2>` and `<h3>` tags used for content hierarchy.
+- **Image Optimisation:** All images have descriptive file names and alt text. The hero image uses responsive `srcset` and `sizes` attributes.
+- **URL Structure:** Clean, descriptive file names (e.g. `services.html`, `enquiry.html`) are used for all pages.
+- **Internal Linking:** The footer Quick Links section on every page links to all other pages. The services page links to the enquiry page, and the homepage links to the services page.
+- **Mobile-Friendliness:** The website is fully responsive with CSS media queries for mobile (600px) and tablet (768px) breakpoints.
+- **robots.txt:** A `robots.txt` file in the root directory allows all search engine crawlers to index all pages and references the sitemap.
+- **sitemap.xml:** An XML sitemap lists all six pages with last modified dates, change frequency and priority values to help search engines understand the site structure.
+
+---
+
 ## Changelog
 
 | Version | Date | Changes |
@@ -274,6 +325,15 @@ HOME
 | v2.4 | 28 May 2026 | Added a Responsiveness of the Website section to the README with device-specific descriptions for Samsung S25 Ultra, iPad Air and MSI MP2412W, with screenshots linked under each device heading. |
 | v2.5 | 28 May 2026 | Removed the duplicate Responsive Design section from Part 2 and the Part 1 Feedback Corrections section from the README to avoid repetition. |
 | v2.6 | 28 May 2026 | Fixed responsiveness screenshot order and captions in the README. Added Enquiry to footer Quick Links on all pages. Added .gitignore for .DS_Store files. Updated README objectives to reflect WhatsApp link on the contact page. |
+| v3.0 | 18 Jun 2026 | Part 3 JavaScript started. Created js/main.js and js/form-validation.js. Added jQuery 3.7.1 and Leaflet 1.9.4 via CDN to all pages. |
+| v3.1 | 18 Jun 2026 | Added SEO meta description and keywords tags to every page. Created robots.txt and sitemap.xml for search engine crawlers. |
+| v3.2 | 18 Jun 2026 | Built an interactive FAQ accordion on the services page using jQuery slideToggle. Five common questions toggle open and closed, with only one answer visible at a time. |
+| v3.3 | 18 Jun 2026 | Added product category tabs to the products page using jQuery show and hide. Clicking a tab filters the product categories with a fade transition. |
+| v3.4 | 18 Jun 2026 | Implemented a lightbox image gallery on the about page. Clicking community or team photos opens them in a full-screen overlay with a close button and Escape key support. |
+| v3.5 | 18 Jun 2026 | Replaced the Google Maps iframe on the contact page with an interactive Leaflet map using OpenStreetMap tiles. A marker with a popup shows the café location in Thokoza. |
+| v3.6 | 18 Jun 2026 | Added a live search filter on the services page. Typing in the search bar filters service cards in real time by matching against the card text content. |
+| v3.7 | 18 Jun 2026 | Implemented client-side JavaScript form validation on both the enquiry and contact pages. Validates on blur and on submit with inline error messages. The enquiry form shows a response modal with service pricing after successful validation. The contact form compiles the message into a mailto link so the user's email client opens with the message ready to send. |
+| v3.8 | 18 Jun 2026 | Added scroll-in animations using IntersectionObserver so sections fade in as they enter the viewport. Added a back-to-top button that appears on scroll. Added CSS transitions and hover effects for the new interactive elements. Updated the README with Part 3 documentation, changelog entries and new references. |
 
 ---
 
@@ -364,14 +424,26 @@ Google Fonts, n.d. *Free Fonts Library*. [Online]. Available at: https://fonts.g
 
 Host Africa, n.d. *Domain Registration in South Africa*. [Online]. Available at: https://hostafrica.co.za/domains/. [Accessed 10 April 2026].
 
+jQuery Foundation, n.d. *jQuery API Documentation*. [Online]. Available at: https://api.jquery.com/. [Accessed 10 June 2026].
+
+Leaflet, n.d. *Leaflet — an open-source JavaScript library for interactive maps*. [Online]. Available at: https://leafletjs.com/. [Accessed 10 June 2026].
+
 MDN Web Docs, n.d. *CSS: Cascading Style Sheets*. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS. [Accessed 5 May 2026].
+
+MDN Web Docs, n.d. *Client-side form validation*. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation. [Accessed 12 June 2026].
+
+MDN Web Docs, n.d. *Intersection Observer API*. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API. [Accessed 12 June 2026].
 
 MDN Web Docs, n.d. *Responsive images*. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Responsive_images. [Accessed 12 May 2026].
 
 MDN Web Docs, n.d. *Using media queries*. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries. [Accessed 12 May 2026].
+
+OpenStreetMap, n.d. *OpenStreetMap*. [Online]. Available at: https://www.openstreetmap.org/. [Accessed 10 June 2026].
 
 PSIRA, n.d. *PSIRA Online Services*. [Online]. Available at: https://www.psira.co.za/. [Accessed 10 April 2026].
 
 SARS, n.d. *SARS e-Filing Portal*. [Online]. Available at: https://www.sars.gov.za/. [Accessed 10 April 2026].
 
 W3Schools, n.d. *CSS Tutorial*. [Online]. Available at: https://www.w3schools.com/css/. [Accessed 5 May 2026].
+
+W3Schools, n.d. *JavaScript Tutorial*. [Online]. Available at: https://www.w3schools.com/js/. [Accessed 10 June 2026].
