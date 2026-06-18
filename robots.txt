@@ -1,0 +1,6 @@
+# Robots.txt for Zok Internet Café
+
+User-agent: *
+Allow: /
+
+Sitemap: https://yourdomain.co.za/sitemap.xml
