@@ -14,7 +14,8 @@ The café currently has no online presence and relies entirely on physical marke
 
 **Full Name:** Axole Yokwana  
 **Student Number:** ST10515746  
-**Module:** WEDE5020w
+**Module:** WEDE5020w  
+**Live Deployment:** [https://axoleyokwana.github.io/ST10515746_WEDE5020w_POE/](https://axoleyokwana.github.io/ST10515746_WEDE5020w_POE/)
 
 ---
 
