@@ -1,0 +1,4 @@
+# Force GitHub Linguist to detect our custom JavaScript files and not treat them as vendored/generated libraries.
+*.js linguist-detectable=true
+*.js linguist-vendored=false
+*.js linguist-generated=false
