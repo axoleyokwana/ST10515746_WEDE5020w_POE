@@ -794,6 +794,346 @@ textarea {
     font-size: 0.9rem;
 }
 
+/* Part 3 interactive element styles */
+
+/* Scroll-in animation: elements start invisible and slide up */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Back-to-top button fixed in the bottom right corner */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 44px;
+    height: 44px;
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.2s ease;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #d97816;
+}
+
+/* FAQ Accordion on the services page */
+.faq-section {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.faq-section .section-title {
+    margin-bottom: 1.5rem;
+}
+
+.faq-item {
+    background-color: var(--white);
+    border: 1px solid var(--grey-line);
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: var(--white);
+    border: none;
+    width: 100%;
+    text-align: left;
+    color: var(--charcoal);
+    transition: background-color 0.2s ease;
+}
+
+.faq-question:hover {
+    background-color: var(--cloud);
+}
+
+/* Toggle icon rotates when the answer is open */
+.faq-question::after {
+    content: "+";
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--blue);
+    transition: transform 0.3s ease;
+}
+
+.faq-question.open::after {
+    content: "−";
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 1.25rem 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Product tab bar on the products page */
+.product-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.product-tabs .tab.active {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+/* Search bar on the services page */
+.search-bar {
+    max-width: 400px;
+    margin: 0 auto 2rem;
+    display: block;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border: 1px solid var(--grey-line);
+    border-radius: 6px;
+    background-color: var(--white);
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(10, 116, 218, 0.18);
+}
+
+/* Image lightbox overlay */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Lightbox inner content wrapper */
+.lightbox-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 90%;
+}
+
+.lightbox-overlay img {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--white);
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 1;
+    transition: color 0.2s ease;
+    z-index: 210;
+}
+
+.lightbox-close:hover {
+    color: var(--orange);
+}
+
+/* Lightbox prev/next navigation arrows */
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    z-index: 210;
+}
+
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-prev {
+    left: 1.5rem;
+}
+
+.lightbox-next {
+    right: 1.5rem;
+}
+
+/* Lightbox caption and image counter */
+.lightbox-caption {
+    color: var(--white);
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lightbox-counter {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+}
+
+/* Make gallery images show a pointer cursor */
+.gallery-trigger {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-trigger:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* No results message for search filter */
+.no-results {
+    text-align: center;
+    color: #777;
+    font-size: 1rem;
+    padding: 2rem 0;
+    font-style: italic;
+}
+
+/* Form validation error and success states */
+.error-msg {
+    display: none;
+    color: #d32f2f;
+    font-size: 0.85rem;
+    margin-top: -0.7rem;
+    margin-bottom: 0.75rem;
+}
+
+.input-error {
+    border-color: #d32f2f !important;
+    box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.15) !important;
+}
+
+.input-success {
+    border-color: #2e7d32 !important;
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.15) !important;
+}
+
+/* Response / success modal overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 300;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content h3 {
+    color: var(--blue);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.modal-content p {
+    line-height: 1.7;
+    color: #555;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    font-size: 1.8rem;
+    color: var(--charcoal);
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #d32f2f;
+}
+
+/* Leaflet map container on the contact page */
+#map {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--grey-line);
+}
+
 /* Tablet breakpoint */
 @media (max-width: 768px) {
     h1 {
