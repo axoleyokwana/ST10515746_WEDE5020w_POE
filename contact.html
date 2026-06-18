@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Zok Internet Café</title>
 
+    <!-- SEO meta tags for search engine visibility -->
+    <meta name="description" content="Contact Zok Internet Café in Thokoza, Gauteng via phone on 076 087 5444, WhatsApp or email. Visit us at Impilo Shopping Centre. View our interactive location map and operating hours. Send us a message directly from our contact form.">
+    <meta name="keywords" content="contact Zok Internet Café, Thokoza contact, Impilo Shopping Centre contact, WhatsApp Zok Internet Café, phone number, email, location map Thokoza, operating hours, send message, Gauteng">
+
     <!-- Google Fonts for headings and body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS for the interactive map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
     <!-- External stylesheet shared by every page -->
     <link rel="stylesheet" href="css/style.css">
@@ -40,7 +47,7 @@
     <main>
 
         <!-- Contact page introduction -->
-        <section class="container contact-intro">
+        <section class="container contact-intro animate-on-scroll">
             <div class="intro-section">
                 <h2>Get In Touch</h2>
                 <p class="intro-text">
@@ -50,24 +57,42 @@
         </section>
 
         <!-- Two columns: contact form on the left, map and details on the right -->
-        <section class="container">
+        <section class="container animate-on-scroll">
             <div class="contact-grid">
 
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form action="#" method="post">
+                    <form id="contact-form" action="#" method="post">
 
                         <label for="full-name">Name &amp; Surname</label>
-                        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required minlength="2" maxlength="100">
+                        <span class="error-msg" id="full-name-error"></span>
 
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" placeholder="Enter your email address" required>
+                        <span class="error-msg" id="contact-email-error"></span>
+
+                        <label for="contact-phone">Contact Number</label>
+                        <input type="tel" id="contact-phone" name="contact-phone" placeholder="e.g. 076 087 5444" required>
+                        <span class="error-msg" id="contact-phone-error"></span>
+
+                        <label for="message-type">Message Type</label>
+                        <select id="message-type" name="message-type" required>
+                            <option value="" disabled selected>-- Select a Message Type --</option>
+                            <option value="General Enquiry">General Enquiry</option>
+                            <option value="Complaint">Complaint</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Partnership">Partnership</option>
+                        </select>
+                        <span class="error-msg" id="message-type-error"></span>
 
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                        <input type="text" id="subject" name="subject" placeholder="Enter the subject" required minlength="2">
+                        <span class="error-msg" id="subject-error"></span>
 
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Write your message here..."></textarea>
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+                        <span class="error-msg" id="contact-message-error"></span>
 
                         <button type="submit" class="btn btn-primary">Send Message</button>
 
@@ -104,19 +129,22 @@
                     </div>
 
                     <h3>Our Location</h3>
-                    <!-- Embedded map of the Thokoza area -->
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.2!2d28.23!3d-26.42!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDI1JzEyLjAiUyAyOMKwMTMnNDguMCJF!5e0!3m2!1sen!2sza!4v1"
-                        allowfullscreen=""
-                        loading="lazy"
-                        title="Google Map showing the location of Zok Internet Café in Thokoza">
-                    </iframe>
+                    <!-- Interactive Leaflet map showing the café location -->
+                    <div id="map"></div>
                 </div>
 
             </div>
         </section>
 
     </main>
+
+    <!-- Response modal shown after successful validation -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
 
     <!-- Full width footer -->
     <footer class="site-footer">
@@ -151,6 +179,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back-to-top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Scroll back to top">&#8679;</button>
+
+    <!-- jQuery library for interactive elements -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Leaflet JavaScript for the interactive map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Shared site-wide JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- Form validation for the contact page -->
+    <script src="js/form-validation.js"></script>
 
 </body>
 </html>

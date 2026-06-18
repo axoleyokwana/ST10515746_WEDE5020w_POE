@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | Zok Internet Café</title>
 
+    <!-- SEO meta tags for search engine visibility -->
+    <meta name="description" content="Browse the full range of products available at Zok Internet Café in Thokoza, Gauteng. We stock affordable stationery, USB flash drives, phone chargers, airtime vouchers, SIM cards and cold drinks at Impilo Shopping Centre.">
+    <meta name="keywords" content="stationery Thokoza, USB flash drives, phone chargers, airtime vouchers Thokoza, SIM cards, cold drinks, pens and folders, Impilo Shopping Centre, affordable products Gauteng, Zok Internet Café products">
+
     <!-- Google Fonts for headings and body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +44,7 @@
     <main>
 
         <!-- Products page introduction -->
-        <section class="container products-intro">
+        <section class="container products-intro animate-on-scroll">
             <div class="intro-section">
                 <h2>Shop With Us</h2>
                 <p class="intro-text">
@@ -49,8 +53,19 @@
             </div>
         </section>
 
-        <!-- Product listings grouped by category in a two column grid -->
+        <!-- Tab buttons for filtering product categories -->
         <section class="container">
+            <div class="product-tabs">
+                <a href="#" class="tab active" data-target="all">All Products</a>
+                <a href="#" class="tab" data-target="stationery">Stationery</a>
+                <a href="#" class="tab" data-target="tech">Tech Accessories</a>
+                <a href="#" class="tab" data-target="airtime">Airtime &amp; Data</a>
+                <a href="#" class="tab" data-target="refreshments">Refreshments</a>
+            </div>
+        </section>
+
+        <!-- Product listings grouped by category in a two column grid -->
+        <section class="container animate-on-scroll">
 
             <div class="product-category" id="stationery">
                 <h2>Stationery</h2>
@@ -163,6 +178,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back-to-top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Scroll back to top">&#8679;</button>
+
+    <!-- jQuery library for interactive elements -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Shared site-wide JavaScript -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquiry | Zok Internet Café</title>
 
+    <!-- SEO meta tags for search engine visibility -->
+    <meta name="description" content="Enquire about services at Zok Internet Café in Thokoza, Gauteng. Submit your details to get pricing and availability information for printing, scanning, SARS e-Filing, CV typing, PSIRA registration and more at Impilo Shopping Centre.">
+    <meta name="keywords" content="enquiry Zok Internet Café, service enquiry Thokoza, pricing enquiry, SARS e-Filing enquiry, printing enquiry, CV typing enquiry, PSIRA enquiry, contact form, Impilo Shopping Centre, Gauteng">
+
     <!-- Google Fonts for headings and body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +44,7 @@
     <main>
 
         <!-- Enquiry form introduction -->
-        <section class="container enquiry-intro">
+        <section class="container enquiry-intro animate-on-scroll">
             <div class="intro-section">
                 <h2>Make an Enquiry</h2>
                 <p class="intro-text">
@@ -49,29 +53,33 @@
             </div>
         </section>
 
-        <!-- Centred enquiry form -->
-        <section class="container">
+        <!-- Centred enquiry form with client-side validation -->
+        <section class="container animate-on-scroll">
             <div class="form-card">
 
-                <form action="#" method="post">
+                <form id="enquiry-form" action="#" method="post">
 
                     <!-- First and last name side by side -->
                     <div class="form-row">
                         <div>
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required minlength="2" maxlength="50">
+                            <span class="error-msg" id="first-name-error"></span>
                         </div>
                         <div>
                             <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                            <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required minlength="2" maxlength="50">
+                            <span class="error-msg" id="last-name-error"></span>
                         </div>
                     </div>
 
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    <span class="error-msg" id="email-error"></span>
 
                     <label for="contact-number">Contact Number</label>
                     <input type="tel" id="contact-number" name="contact-number" placeholder="e.g. 076 087 5444" required>
+                    <span class="error-msg" id="contact-number-error"></span>
 
                     <label for="service-type">Service Type</label>
                     <select id="service-type" name="service-type" required>
@@ -85,9 +93,20 @@
                         <option value="internet">Internet Browsing</option>
                         <option value="other">Other</option>
                     </select>
+                    <span class="error-msg" id="service-type-error"></span>
 
-                    <label for="message">Message / Additional Details</label>
-                    <textarea id="message" name="message" rows="6" placeholder="Provide any additional details about your enquiry..."></textarea>
+                    <label for="preferred-contact">Preferred Contact Method</label>
+                    <select id="preferred-contact" name="preferred-contact" required>
+                        <option value="" disabled selected>-- How should we contact you? --</option>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone Call</option>
+                        <option value="whatsapp">WhatsApp</option>
+                    </select>
+                    <span class="error-msg" id="preferred-contact-error"></span>
+
+                    <label for="enquiry-message">Message / Additional Details</label>
+                    <textarea id="enquiry-message" name="message" rows="6" placeholder="Provide any additional details about your enquiry..."></textarea>
+                    <span class="error-msg" id="enquiry-message-error"></span>
 
                     <button type="submit" class="btn btn-primary">Submit Enquiry</button>
 
@@ -96,6 +115,14 @@
         </section>
 
     </main>
+
+    <!-- Response modal shown after successful validation -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
 
     <!-- Full width footer -->
     <footer class="site-footer">
@@ -130,6 +157,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back-to-top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Scroll back to top">&#8679;</button>
+
+    <!-- jQuery library for interactive elements -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Shared site-wide JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- Form validation for the enquiry page -->
+    <script src="js/form-validation.js"></script>
 
 </body>
 </html>

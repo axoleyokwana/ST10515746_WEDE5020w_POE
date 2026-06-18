@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Zok Internet Café</title>
 
+    <!-- SEO meta tags for search engine visibility -->
+    <meta name="description" content="Explore the full range of affordable digital services at Zok Internet Café in Thokoza. We offer printing from R2 per page, scanning, SARS e-Filing, SASSA applications, PSIRA registration, professional CV typing and internet access at Impilo Shopping Centre.">
+    <meta name="keywords" content="printing services Thokoza, scanning services, SARS e-Filing assistance, SASSA applications Thokoza, CV typing service, PSIRA registration, internet browsing, laminating, photocopying, Impilo Shopping Centre, affordable digital services Gauteng">
+
     <!-- Google Fonts for headings and body text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +44,7 @@
     <main>
 
         <!-- Service introduction -->
-        <section class="container service-intro">
+        <section class="container service-intro animate-on-scroll">
             <div class="intro-section">
                 <p class="intro-text">
                     At Zok Internet Café, we provide professional digital services tailored to meet the unique needs of our Thokoza community. From government portal assistance to professional document preparation, we're here to help you navigate technology with confidence.
@@ -48,8 +52,15 @@
             </div>
         </section>
 
-        <!-- Service grid, three columns across two rows -->
+        <!-- Search bar to filter services in real time -->
         <section class="container">
+            <div class="search-bar">
+                <input type="text" id="service-search" placeholder="Search for a service..." aria-label="Search services">
+            </div>
+        </section>
+
+        <!-- Service grid, three columns across two rows -->
+        <section class="container animate-on-scroll">
             <h2 class="section-title">Services We Offer</h2>
             <div class="service-grid">
                 <article class="service-card" id="printing">
@@ -108,6 +119,46 @@
             </div>
         </section>
 
+        <!-- FAQ Accordion with common service questions -->
+        <section class="container faq-section animate-on-scroll">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">What documents do I need for SARS e-Filing?</button>
+                <div class="faq-answer">
+                    <p>You will need your South African ID, your SARS tax reference number, and any relevant IRP5 or IT3 certificates from your employer. Our team will guide you through the entire process.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How long does CV typing take?</button>
+                <div class="faq-answer">
+                    <p>A standard CV typically takes 30 to 60 minutes to complete, depending on the level of detail required. We also offer same-day turnaround for urgent requests.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can I print in colour?</button>
+                <div class="faq-answer">
+                    <p>Yes, we offer both black and white and full colour printing. Colour printing starts from R5.00 per page. We can print on A4, A3, and photo paper.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do you offer WiFi access?</button>
+                <div class="faq-answer">
+                    <p>Yes, WiFi access is available for customers at R10.00 per 30 minutes. You can also use our desktop computers for browsing and research.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What are your operating hours?</button>
+                <div class="faq-answer">
+                    <p>We are open Monday to Friday from 08:00 to 17:00, and Saturday from 08:00 to 14:00. We are closed on Sundays and public holidays.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Full width enquire now bar -->
         <section class="cta-bar">
             <div class="container">
@@ -151,6 +202,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back-to-top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Scroll back to top">&#8679;</button>
+
+    <!-- jQuery library for interactive elements -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Shared site-wide JavaScript -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>
